@@ -1,975 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>REALLIFE TRADING | Forex Academy</title>
-
-  <meta name="description"
-        content="REALLIFE TRADING - Forex education, technical analysis, trading psychology and risk management.">
-
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="REALLIFE TRADING - Forex education, technical analysis, trading psychology and risk management.">
+<title>REALLIFE TRADING | Forex Academy</title>
+<style>
+:root{--bg:#0a0c10;--card:#12161d;--line:#222a36;--text:#eef1f6;--mute:#98a2b3;--gold:#f5b335;--green:#22c55e;--red:#ef4444}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1150px;margin:0 auto;padding:0 20px}
+section{padding:70px 0}
+.tag{color:var(--gold);letter-spacing:2px;font-size:.78rem;font-weight:700}
+h1,h2,h3{line-height:1.15;text-transform:uppercase}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);margin:8px 0 14px}
+.sub{color:var(--mute);max-width:640px}
+.btn{display:inline-block;padding:13px 24px;border-radius:6px;font-weight:700;font-size:.9rem;border:1px solid var(--gold);margin:6px 8px 0 0}
+.btn.fill{background:var(--gold);color:#111}
+header{position:sticky;top:0;z-index:20;background:rgba(10,12,16,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;letter-spacing:2px;color:var(--gold)}
+nav a{margin-left:20px;font-size:.85rem;color:var(--mute)}
+nav a:hover{color:var(--gold)}
+@media(max-width:800px){nav{display:none}}
+.hero{padding:50px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,7vw,4.2rem);margin:10px 0 16px}
+.hero h1 span{color:var(--gold)}
+.photo-frame{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.photo-frame img{width:100%;height:520px;object-fit:cover;object-position:center 40%}
+.chart-card{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(10,12,16,.82);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.chart-top{display:flex;justify-content:space-between;font-size:.8rem}
+.chart-top b{color:var(--green)}
+.stats{display:flex;gap:30px;margin-top:28px}
+.stats div{font-size:.85rem;color:var(--mute)}
+.stats b{display:block;color:var(--gold);font-size:1.4rem}
+@media(max-width:850px){.hero .wrap{grid-template-columns:1fr}.photo-frame img{height:430px}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:34px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card .n{color:var(--gold);font-weight:800;font-size:.9rem}
+.card h3{font-size:1.05rem;margin:8px 0}
+.card p{color:var(--mute);font-size:.92rem}
+.soon{display:inline-block;margin-top:12px;font-size:.7rem;font-weight:700;color:var(--gold);border:1px solid var(--gold);padding:3px 10px;border-radius:20px}
+.pairs .card{display:flex;justify-content:space-between;align-items:center}
+.up{color:var(--green)}.down{color:var(--red)}
+.note{color:var(--mute);font-size:.78rem;margin-top:14px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.split.rev .pic{order:2}
+.pic img{border-radius:16px;border:1px solid var(--line);width:100%;height:520px;object-fit:cover}
+blockquote{border-left:3px solid var(--gold);padding:6px 0 6px 18px;margin:20px 0;font-size:1.15rem;font-style:italic}
+blockquote small{display:block;margin-top:8px;font-style:normal;color:var(--gold);font-size:.8rem;letter-spacing:1px}
+.band{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media(max-width:850px){.split{grid-template-columns:1fr}.split.rev .pic{order:0}.pic img{height:430px}}
+.big{font-size:2.4rem;font-weight:800;color:var(--gold)}
+.contact p{margin:6px 0;color:var(--mute)}.contact b{color:var(--text)}
+.social a{display:inline-block;margin:6px 14px 0 0;color:var(--gold);font-size:.9rem}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mute);font-size:.8rem}
+.wa{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;font-weight:700;padding:12px 18px;border-radius:30px;z-index:30;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+</style>
 </head>
-
 <body>
-
-  <!-- ================= NAVBAR ================= -->
-
-  <header class="navbar">
-
-    <a href="#home" class="logo">
-      <span>REAL</span>LIFE
-      <small>TRADING</small>
-    </a>
-
-    <nav class="desktop-nav">
-      <a href="#home">Home</a>
-      <a href="#academy">Academy</a>
-      <a href="#courses">Courses</a>
-      <a href="#markets">Markets</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <a href="#courses" class="nav-button">
-      START LEARNING
-    </a>
-
-    <button class="menu-button" id="menuButton">
-      ☰
-    </button>
-
-  </header>
-
-
-  <!-- ================= MOBILE MENU ================= -->
-
-  <div class="mobile-menu" id="mobileMenu">
-
-    <a href="#home">Home</a>
-    <a href="#academy">Academy</a>
-    <a href="#courses">Courses</a>
-    <a href="#markets">Markets</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-
-  </div>
-
-
-  <!-- ================= HERO ================= -->
-
-  <section id="home" class="hero">
-
-    <div class="hero-content">
-
-      <p class="eyebrow">
-        WELCOME TO REALLIFE TRADING
-      </p>
-
-      <h1>
-        MASTER THE
-        <span>FOREX MARKET.</span>
-      </h1>
-
-      <p class="hero-text">
-        Learn the foundations of forex trading, technical analysis,
-        risk management and trading psychology through structured
-        education designed for aspiring traders.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="#courses" class="gold-button">
-          EXPLORE COURSES
-        </a>
-
-        <a href="#about" class="outline-button">
-          ABOUT US
-        </a>
-
-      </div>
-
-      <div class="hero-trust">
-
-        <div>
-          <strong>01</strong>
-          <span>Education</span>
-        </div>
-
-        <div>
-          <strong>02</strong>
-          <span>Discipline</span>
-        </div>
-
-        <div>
-          <strong>03</strong>
-          <span>Strategy</span>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- TRADING TERMINAL -->
-
-    <div class="terminal">
-
-      <div class="terminal-header">
-
-        <div>
-          <strong>EUR/USD</strong>
-          <span>1H</span>
-        </div>
-
-        <div class="profit">
-          +1.24%
-        </div>
-
-      </div>
-
-
-      <div class="terminal-price">
-
-        <strong>1.17482</strong>
-
-        <span>
-          Market overview
-        </span>
-
-      </div>
-
-
-      <div class="big-chart">
-
-        <div class="chart-grid"></div>
-
-        <div class="candles">
-
-          <i class="bull"></i>
-          <i class="bear"></i>
-          <i class="bull"></i>
-          <i class="bull"></i>
-          <i class="bear"></i>
-          <i class="bull"></i>
-          <i class="bull"></i>
-          <i class="bear"></i>
-          <i class="bull"></i>
-          <i class="bull"></i>
-          <i class="bull"></i>
-          <i class="bear"></i>
-          <i class="bull"></i>
-          <i class="bull"></i>
-          <i class="bull"></i>
-
-        </div>
-
-        <div class="chart-line"></div>
-
-      </div>
-
-
-      <div class="terminal-footer">
-
-        <span>OPEN</span>
-        <strong>1.17342</strong>
-
-        <span>HIGH</span>
-        <strong>1.17691</strong>
-
-        <span>LOW</span>
-        <strong>1.16983</strong>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= STATS ================= -->
-
-  <section class="stats">
-
-    <div>
-      <strong>01</strong>
-      <span>Forex Education</span>
-    </div>
-
-    <div>
-      <strong>02</strong>
-      <span>Technical Analysis</span>
-    </div>
-
-    <div>
-      <strong>03</strong>
-      <span>Risk Management</span>
-    </div>
-
-    <div>
-      <strong>04</strong>
-      <span>Trading Psychology</span>
-    </div>
-
-  </section>
-
-
-  <!-- ================= ACADEMY ================= -->
-
-  <section id="academy" class="section academy">
-
-    <div class="section-heading">
-
-      <p class="eyebrow">
-        THE REALLIFE ACADEMY
-      </p>
-
-      <h2>
-        BUILD YOUR
-        <span>TRADING EDGE.</span>
-      </h2>
-
-      <p>
-        We help aspiring traders develop a strong foundation in
-        forex education and understand how the financial markets work.
-      </p>
-
-    </div>
-
-
-    <div class="academy-grid">
-
-      <article class="academy-card">
-
-        <span class="card-number">01</span>
-
-        <div class="card-icon">
-          FX
-        </div>
-
-        <h3>
-          FOREX FUNDAMENTALS
-        </h3>
-
-        <p>
-          Learn currency pairs, pips, spreads, leverage,
-          market sessions and the basic mechanics of forex.
-        </p>
-
-        <a href="#contact">
-          LEARN MORE →
-        </a>
-
-      </article>
-
-
-      <article class="academy-card active">
-
-        <span class="card-number">02</span>
-
-        <div class="card-icon">
-          TA
-        </div>
-
-        <h3>
-          TECHNICAL ANALYSIS
-        </h3>
-
-        <p>
-          Understand price action, support and resistance,
-          trends, candlestick patterns and market structure.
-        </p>
-
-        <a href="#contact">
-          LEARN MORE →
-        </a>
-
-      </article>
-
-
-      <article class="academy-card">
-
-        <span class="card-number">03</span>
-
-        <div class="card-icon">
-          RM
-        </div>
-
-        <h3>
-          RISK MANAGEMENT
-        </h3>
-
-        <p>
-          Learn how responsible position sizing and risk control
-          can form part of a structured trading approach.
-        </p>
-
-        <a href="#contact">
-          LEARN MORE →
-        </a>
-
-      </article>
-
-
-      <article class="academy-card">
-
-        <span class="card-number">04</span>
-
-        <div class="card-icon">
-          TP
-        </div>
-
-        <h3>
-          TRADING PSYCHOLOGY
-        </h3>
-
-        <p>
-          Develop discipline, patience and emotional control
-          when studying and participating in the markets.
-        </p>
-
-        <a href="#contact">
-          LEARN MORE →
-        </a>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= COURSES ================= -->
-
-  <section id="courses" class="section courses">
-
-    <div class="section-heading">
-
-      <p class="eyebrow">
-        OUR PROGRAMS
-      </p>
-
-      <h2>
-        LEARN.
-        <span>DEVELOP.</span>
-        TRADE.
-      </h2>
-
-      <p>
-        Choose the area of trading knowledge you want to develop.
-      </p>
-
-    </div>
-
-
-    <div class="course-list">
-
-      <div class="course">
-
-        <div class="course-number">
-          01
-        </div>
-
-        <div class="course-info">
-
-          <h3>
-            BEGINNER FOREX COURSE
-          </h3>
-
-          <p>
-            A foundation for people who are completely new to forex.
-          </p>
-
-        </div>
-
-        <div class="course-status">
-          COMING SOON
-        </div>
-
-      </div>
-
-
-      <div class="course">
-
-        <div class="course-number">
-          02
-        </div>
-
-        <div class="course-info">
-
-          <h3>
-            TECHNICAL ANALYSIS
-          </h3>
-
-          <p>
-            Explore charts, market structure, trends and price action.
-          </p>
-
-        </div>
-
-        <div class="course-status">
-          COMING SOON
-        </div>
-
-      </div>
-
-
-      <div class="course">
-
-        <div class="course-number">
-          03
-        </div>
-
-        <div class="course-info">
-
-          <h3>
-            ADVANCED TRADING
-          </h3>
-
-          <p>
-            Develop a more structured approach to analysing markets.
-          </p>
-
-        </div>
-
-        <div class="course-status">
-          COMING SOON
-        </div>
-
-      </div>
-
-
-      <div class="course">
-
-        <div class="course-number">
-          04
-        </div>
-
-        <div class="course-info">
-
-          <h3>
-            TRADING PSYCHOLOGY
-          </h3>
-
-          <p>
-            Learn about discipline, emotions and decision making.
-          </p>
-
-        </div>
-
-        <div class="course-status">
-          COMING SOON
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= MARKETS ================= -->
-
-  <section id="markets" class="section markets">
-
-    <div class="section-heading">
-
-      <p class="eyebrow">
-        MARKET WATCH
-      </p>
-
-      <h2>
-        KNOW YOUR
-        <span>MARKETS.</span>
-      </h2>
-
-      <p>
-        Follow some of the markets commonly studied by forex and
-        financial market participants.
-      </p>
-
-    </div>
-
-
-    <div class="market-grid">
-
-      <div class="market-card">
-
-        <div>
-          <span>EUR/USD</span>
-          <small>EUR / USD</small>
-        </div>
-
-        <strong>1.17482</strong>
-
-        <b class="up">
-          +1.24%
-        </b>
-
-      </div>
-
-
-      <div class="market-card">
-
-        <div>
-          <span>GBP/USD</span>
-          <small>GBP / USD</small>
-        </div>
-
-        <strong>1.34921</strong>
-
-        <b class="up">
-          +0.82%
-        </b>
-
-      </div>
-
-
-      <div class="market-card">
-
-        <div>
-          <span>XAU/USD</span>
-          <small>GOLD</small>
-        </div>
-
-        <strong>3,421.70</strong>
-
-        <b class="down">
-          -0.31%
-        </b>
-
-      </div>
-
-
-      <div class="market-card">
-
-        <div>
-          <span>USD/JPY</span>
-          <small>USD / JPY</small>
-        </div>
-
-        <strong>147.82</strong>
-
-        <b class="up">
-          +0.46%
-        </b>
-
-      </div>
-
-    </div>
-
-    <p class="market-note">
-      *Market figures shown on this page are illustrative and are not
-      intended to represent live prices.
-    </p>
-
-  </section>
-
-
-  <!-- ================= ABOUT ================= -->
-
-  <section id="about" class="section about">
-
-    <div class="about-visual">
-
-      <div class="gold-ring"></div>
-
-      <div class="about-terminal">
-
-        <div class="mini-top">
-          REALLIFE TRADING
-        </div>
-
-        <div class="mini-chart">
-
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="about-content">
-
-      <p class="eyebrow">
-        ABOUT REALLIFE TRADING
-      </p>
-
-      <h2>
-        TRADE WITH
-        <span>KNOWLEDGE.</span>
-      </h2>
-
-      <p>
-        REALLIFE TRADING is a forex education brand focused on helping
-        aspiring traders understand the financial markets.
-      </p>
-
-      <p>
-        Our approach focuses on education, technical analysis,
-        risk management, discipline and trading psychology.
-      </p>
-
-      <p>
-        The goal is not to promise overnight success. The goal is to
-        help students build knowledge and develop a responsible,
-        structured approach to the markets.
-      </p>
-
-      <a href="#contact" class="gold-button">
-        JOIN REALLIFE TRADING
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= WHY US ================= -->
-
-  <section class="section why-us">
-
-    <div class="section-heading">
-
-      <p class="eyebrow">
-        WHY REALLIFE TRADING
-      </p>
-
-      <h2>
-        BUILT FOR
-        <span>REAL TRADERS.</span>
-      </h2>
-
-    </div>
-
-
-    <div class="why-grid">
-
-      <div>
-        <strong>01</strong>
-        <h3>STRUCTURED LEARNING</h3>
-        <p>
-          Learn concepts in a logical order instead of jumping
-          randomly between trading strategies.
-        </p>
-      </div>
-
-      <div>
-        <strong>02</strong>
-        <h3>RISK FIRST</h3>
-        <p>
-          Understand the importance of risk management before
-          focusing on potential returns.
-        </p>
-      </div>
-
-      <div>
-        <strong>03</strong>
-        <h3>MARKET KNOWLEDGE</h3>
-        <p>
-          Develop a better understanding of how markets move and
-          what traders analyse.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= CTA ================= -->
-
-  <section class="cta">
-
-    <p class="eyebrow">
-      YOUR JOURNEY STARTS HERE
-    </p>
-
-    <h2>
-      READY TO TAKE
-      <span>TRADING SERIOUSLY?</span>
-    </h2>
-
-    <p>
-      Start building your forex knowledge with REALLIFE TRADING.
-    </p>
-
-    <a href="#contact" class="gold-button">
-      GET STARTED
-    </a>
-
-  </section>
-
-
-  <!-- ================= CONTACT ================= -->
-
-  <section id="contact" class="section contact">
-
-    <div class="section-heading">
-
-      <p class="eyebrow">
-        CONTACT REALLIFE TRADING
-      </p>
-
-      <h2>
-        LET'S
-        <span>CONNECT.</span>
-      </h2>
-
-      <p>
-        Interested in our courses or want to find out when classes
-        begin? Send us a message.
-      </p>
-
-    </div>
-
-
-    <div class="contact-layout">
-
-      <div class="contact-details">
-
-        <div>
-          <span>EMAIL</span>
-          <strong>ppheneus@gmail.com</strong>
-        </div>
-
-        <div>
-          <span>PHONE</span>
-          <strong>+27 82 077 0056</strong>
-        </div>
-
-        <div>
-          <span>CLASSES</span>
-          <strong>To Be Confirmed</strong>
-        </div>
-
-      </div>
-
-
-      <form class="contact-form" id="contactForm">
-
-        <input
-          type="text"
-          placeholder="Your Name"
-          required
-        >
-
-        <input
-          type="email"
-          placeholder="Your Email"
-          required
-        >
-
-        <input
-          type="tel"
-          placeholder="Phone Number"
-        >
-
-        <textarea
-          placeholder="How can we help you?"
-          rows="6"
-        ></textarea>
-
-        <button
-          type="submit"
-          class="gold-button"
-        >
-          SEND MESSAGE
-        </button>
-
-      </form>
-
-    </div>
-
-  </section>
-
-
- <!-- ================= FOOTER ================= -->
-
-<footer>
-
-  <div class="footer-logo">
-
-    <span>REAL</span>LIFE
-
-    <small>
-      TRADING
-    </small>
-
-  </div>
-
-
-  <p class="footer-tagline">
-    EDUCATION • DISCIPLINE • STRATEGY
-  </p>
-
-
-  <!-- SOCIAL MEDIA -->
-
-  <div class="social-section">
-
-    <h3>
-      FOLLOW REALLIFE TRADING
-    </h3>
-
-    <div class="social-links">
-
-      <a
-        href="https://www.instagram.com/reall.ifeomg/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram"
-      >
-        Instagram
-      </a>
-
-
-      <a
-        href="https://www.facebook.com/reallifeomg"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Facebook"
-      >
-        Facebook
-      </a>
-
-
-      <a
-        href="https://www.tiktok.com/@phelelaniii"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="TikTok"
-      >
-        TikTok
-      </a>
-
-
-      <a
-        href="https://www.youtube.com/@reallife_fx"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="YouTube"
-      >
-        YouTube
-      </a>
-
-
-      <a
-        href="https://x.com/reallifeomgfx"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="X"
-      >
-        X
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <!-- FOOTER NAVIGATION -->
-
-  <div class="footer-links">
-
-    <a href="#home">Home</a>
-
-    <a href="#academy">Academy</a>
-
-    <a href="#courses">Courses</a>
-
-    <a href="#markets">Markets</a>
-
-    <a href="#about">About</a>
-
-    <a href="#contact">Contact</a>
-
-  </div>
-
-
-  <!-- CONTACT -->
-
-  <div class="footer-contact">
-
-    <a href="mailto:ppheneus@gmail.com">
-      📧 ppheneus@gmail.com
-    </a>
-
-    <a href="https://wa.me/27820770056"
-       target="_blank"
-       rel="noopener noreferrer">
-      📱 WhatsApp: +27 82 077 0056
-    </a>
-
-  </div>
-
-
-  <p class="copyright">
-    © 2026 REALLIFE TRADING. All Rights Reserved.
-  </p>
-
-
-  <p class="disclaimer">
-
-    Risk Disclaimer: Forex and CFD trading involves significant risk
-    and may not be suitable for all investors. Educational content
-    provided by REALLIFE TRADING is for educational purposes only
-    and is not financial advice.
-
-  </p>
-
-</footer>
-
-
-<!-- ================= WHATSAPP ================= -->
-
-<a
-  href="https://wa.me/27820770056"
-  class="whatsapp"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Chat with REALLIFE TRADING on WhatsApp"
->
-  WhatsApp
-</a>
-
-    <p>
-      © 2026 REALLIFE TRADING. All Rights Reserved.
-    </p>
-
-    <p class="disclaimer">
-      Risk Disclaimer: Forex and CFD trading involves significant risk
-      and may not be suitable for all investors. Educational content
-      provided by REALLIFE TRADING is for educational purposes only
-      and is not financial advice.
-    </p>
-
-  </footer>
-
-
-  <!-- ================= WHATSAPP ================= -->
-
-  <a
-    href="https://wa.me/27820770056"
-    class="whatsapp"
-    target="_blank"
-    aria-label="Chat with REALLIFE TRADING on WhatsApp"
-  >
-    WhatsApp
-  </a>
-
-
-  <script src="script.js"></script>
-
+<header><div class="wrap nav"><a class="logo" href="#home">REALLIFE TRADING</a>
+<nav><a href="#home">Home</a><a href="#academy">Academy</a><a href="#courses">Courses</a><a href="#markets">Markets</a><a href="#story">Our Story</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
+
+<section class="hero" id="home"><div class="wrap">
+<div>
+<div class="tag">WELCOME TO REALLIFE TRADING</div>
+<h1>Master the <span>Forex</span> market.</h1>
+<p class="sub">Learn the foundations of forex trading, technical analysis, risk management and trading psychology through structured education designed for aspiring traders.</p>
+<div style="margin-top:20px"><a class="btn fill" href="#courses">EXPLORE COURSES</a><a class="btn" href="#story">OUR STORY</a></div>
+<div class="stats"><div><b>01</b>Education</div><div><b>02</b>Discipline</div><div><b>03</b>Strategy</div></div>
+</div>
+<div class="photo-frame">
+<img src="images/hero-suit.jpg" alt="Reallife outside The Bayshore Inn">
+<div class="chart-card">
+<div class="chart-top"><span><b style="color:var(--text)">EUR/USD</b> · 1H</span><b>+1.24%</b></div>
+<svg viewBox="0 0 300 70" width="100%" height="70" aria-hidden="true">
+<g stroke-width="1.5"><line x1="15" y1="10" x2="15" y2="60" stroke="#22c55e"/><rect x="11" y="32" width="8" height="20" fill="#22c55e"/>
+<line x1="45" y1="22" x2="45" y2="62" stroke="#ef4444"/><rect x="41" y="30" width="8" height="18" fill="#ef4444"/>
+<line x1="75" y1="18" x2="75" y2="55" stroke="#22c55e"/><rect x="71" y="26" width="8" height="22" fill="#22c55e"/>
+<line x1="105" y1="20" x2="105" y2="48" stroke="#22c55e"/><rect x="101" y="24" width="8" height="16" fill="#22c55e"/>
+<line x1="135" y1="26" x2="135" y2="58" stroke="#ef4444"/><rect x="131" y="30" width="8" height="20" fill="#ef4444"/>
+<line x1="165" y1="14" x2="165" y2="46" stroke="#22c55e"/><rect x="161" y="20" width="8" height="18" fill="#22c55e"/>
+<line x1="195" y1="10" x2="195" y2="38" stroke="#22c55e"/><rect x="191" y="14" width="8" height="18" fill="#22c55e"/>
+<line x1="225" y1="12" x2="225" y2="40" stroke="#ef4444"/><rect x="221" y="16" width="8" height="14" fill="#ef4444"/>
+<line x1="255" y1="4" x2="255" y2="30" stroke="#22c55e"/><rect x="251" y="8" width="8" height="16" fill="#22c55e"/>
+<line x1="285" y1="2" x2="285" y2="24" stroke="#22c55e"/><rect x="281" y="5" width="8" height="14" fill="#22c55e"/></g>
+<polyline points="15,48 75,38 135,42 195,24 255,16 285,10" fill="none" stroke="#f5b335" stroke-width="2" stroke-dasharray="4 3"/>
+</svg>
+<div class="chart-top" style="color:var(--mute)"><span>1.17482</span><span>O 1.17342 · H 1.17691 · L 1.16983</span></div>
+</div></div>
+</div></section>
+
+<section id="academy" class="band"><div class="wrap">
+<div class="tag">THE REALLIFE ACADEMY</div><h2>Build your trading edge.</h2>
+<p class="sub">We help aspiring traders develop a strong foundation in forex education and understand how the financial markets work.</p>
+<div class="grid">
+<div class="card"><div class="n">01 · FX</div><h3>Forex Fundamentals</h3><p>Learn currency pairs, pips, spreads, leverage, market sessions and the basic mechanics of forex.</p></div>
+<div class="card"><div class="n">02 · TA</div><h3>Technical Analysis</h3><p>Understand price action, support and resistance, trends, candlestick patterns and market structure.</p></div>
+<div class="card"><div class="n">03 · RM</div><h3>Risk Management</h3><p>Learn how responsible position sizing and risk control can form part of a structured trading approach.</p></div>
+<div class="card"><div class="n">04 · TP</div><h3>Trading Psychology</h3><p>Develop discipline, patience and emotional control when studying and participating in the markets.</p></div>
+</div></div></section>
+
+<section id="story"><div class="wrap">
+<div class="split">
+<div class="pic"><img src="images/first-withdrawal.jpg" alt="Reallife holding cash from his first forex withdrawal" style="object-position:center 30%"></div>
+<div>
+<div class="tag">WHERE IT STARTED</div>
+<h2>My first withdrawal.</h2>
+<div class="big">R5,000</div>
+<p class="sub">I was 19 years old when I made my first forex withdrawal. It was not about the money. It was proof that learning, discipline and patience can turn a dream into something real.</p>
+<blockquote>“Start small, stay disciplined, and let consistency build your future.”<small>— REALLIFE</small></blockquote>
+<p class="note">Personal experience only. Results vary and past performance is not a guarantee of future results.</p>
+</div></div></div></section>
+
+<section class="band"><div class="wrap">
+<div class="split rev">
+<div class="pic"><img src="images/sissi-reallife.jpg" alt="Reallife and Sissi" style="object-position:center 60%"></div>
+<div>
+<div class="tag">LOVE &amp; PARTNERSHIP</div>
+<h2>Reallife &amp; Sissi.</h2>
+<p class="sub">Behind every disciplined trader is someone who believes in the plan on the red days too. Sissi is my girlfriend, my partner and my biggest supporter, and together we are building a future one trade, one lesson and one goal at a time.</p>
+<blockquote>“Love is the best partnership. When two people grow together, every goal becomes closer and every setback becomes lighter.”<small>— REALLIFE &amp; SISSI</small></blockquote>
+<p class="sub">Two minds, one vision: financial freedom, built together.</p>
+</div></div></div></section>
+
+<section><div class="wrap">
+<div class="split">
+<div class="pic"><img src="images/khula.jpg" alt="Reallife and his son Khula" style="object-position:center 25%"></div>
+<div>
+<div class="tag">THE REAL REASON</div>
+<h2>For Khula.</h2>
+<p class="sub">This is my little man, Khula, and his smile is the reason I keep showing up. Every chart I study and every lesson I learn is for the future I want to build for him.</p>
+<blockquote>“I’m not just trading for today. I’m building a legacy he can be proud of.”<small>— REALLIFE</small></blockquote>
+</div></div></div></section>
+
+<section id="courses" class="band"><div class="wrap">
+<div class="tag">OUR PROGRAMS</div><h2>Learn. Develop. Trade.</h2>
+<p class="sub">Choose the area of trading knowledge you want to develop.</p>
+<div class="grid">
+<div class="card"><div class="n">01</div><h3>Beginner Forex Course</h3><p>A foundation for people who are completely new to forex.</p><span class="soon">COMING SOON</span></div>
+<div class="card"><div class="n">02</div><h3>Technical Analysis</h3><p>Explore charts, market structure, trends and price action.</p><span class="soon">COMING SOON</span></div>
+<div class="card"><div class="n">03</div><h3>Advanced Trading</h3><p>Develop a more structured approach to analysing markets.</p><span class="soon">COMING SOON</span></div>
+<div class="card"><div class="n">04</div><h3>Trading Psychology</h3><p>Learn about discipline, emotions and decision making.</p><span class="soon">COMING SOON</span></div>
+</div></div></section>
+
+<section id="markets"><div class="wrap">
+<div class="tag">MARKET WATCH</div><h2>Know your markets.</h2>
+<p class="sub">Follow some of the markets commonly studied by forex and financial market participants.</p>
+<div class="grid pairs">
+<div class="card"><div><h3>EUR/USD</h3><small class="sub">EUR / USD</small></div><div><b>1.17482</b><br><span class="up">+1.24%</span></div></div>
+<div class="card"><div><h3>GBP/USD</h3><small class="sub">GBP / USD</small></div><div><b>1.34921</b><br><span class="up">+0.82%</span></div></div>
+<div class="card"><div><h3>XAU/USD</h3><small class="sub">GOLD</small></div><div><b>3,421.70</b><br><span class="down">-0.31%</span></div></div>
+<div class="card"><div><h3>USD/JPY</h3><small class="sub">USD / JPY</small></div><div><b>147.82</b><br><span class="up">+0.46%</span></div></div>
+</div>
+<p class="note">*Market figures shown on this page are illustrative and are not intended to represent live prices.</p>
+</div></section>
+
+<section id="about" class="band"><div class="wrap">
+<div class="split rev">
+<div class="pic"><img src="images/phone.jpg" alt="Reallife checking the markets on his phone" style="object-position:center 30%"></div>
+<div>
+<div class="tag">ABOUT REALLIFE TRADING</div>
+<h2>Trade with knowledge.</h2>
+<p class="sub">REALLIFE TRADING is a forex education brand focused on helping aspiring traders understand the financial markets. Our approach focuses on education, technical analysis, risk management, discipline and trading psychology.</p>
+<p class="sub" style="margin-top:12px">The goal is not to promise overnight success. The goal is to help students build knowledge and develop a responsible, structured approach to the markets.</p>
+<div class="grid" style="grid-template-columns:1fr;gap:10px">
+<div class="card"><div class="n">01</div><h3>Structured Learning</h3><p>Learn concepts in a logical order instead of jumping randomly between strategies.</p></div>
+<div class="card"><div class="n">02</div><h3>Risk First</h3><p>Understand risk management before focusing on potential returns.</p></div>
+<div class="card"><div class="n">03</div><h3>Market Knowledge</h3><p>Develop a better understanding of how markets move and what traders analyse.</p></div>
+</div>
+<a class="btn fill" href="#contact" style="margin-top:20px">JOIN REALLIFE TRADING</a>
+</div></div></div></section>
+
+<section id="contact"><div class="wrap contact">
+<div class="tag">YOUR JOURNEY STARTS HERE</div><h2>Ready to take trading seriously?</h2>
+<p class="sub">Interested in our courses or want to find out when classes begin? Send us a message.</p>
+<div style="margin-top:22px"><p>EMAIL <b>ppheneus@gmail.com</b></p><p>PHONE <b>+27 82 077 0056</b></p><p>CLASSES <b>To Be Confirmed</b></p></div>
+<a class="btn fill" href="https://wa.me/27820770056" style="margin-top:18px">MESSAGE ON WHATSAPP</a>
+<div class="social" style="margin-top:20px">
+<a href="https://www.instagram.com/reall.ifeomg/">Instagram</a><a href="https://www.facebook.com/reallifeomg">Facebook</a><a href="https://www.tiktok.com/@phelelaniii">TikTok</a><a href="https://www.youtube.com/@reallife_fx">YouTube</a><a href="https://x.com/reallifeomgfx">X</a></div>
+</div></section>
+
+<footer><div class="wrap">
+<p><b class="logo">REALLIFE TRADING</b> · EDUCATION • DISCIPLINE • STRATEGY</p>
+<p style="margin-top:8px">© 2026 REALLIFE TRADING. All Rights Reserved.</p>
+<p style="margin-top:8px">Risk Disclaimer: Forex and CFD trading involves significant risk and may not be suitable for all investors. Educational content provided by REALLIFE TRADING is for educational purposes only and is not financial advice.</p>
+</div></footer>
+<a class="wa" href="https://wa.me/27820770056">WhatsApp</a>
 </body>
-</html>
+                                                          </html>
